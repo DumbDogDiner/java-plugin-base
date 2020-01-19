@@ -1,0 +1,7 @@
+name: ${project.name}
+version: ${project.version}
+main: com.dumbdogdiner.myawesomeplugin.MyAwesomePlugin
+authors:
+  - Your name here
+load: STARTUP
+api-version: 1.14
