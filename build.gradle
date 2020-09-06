@@ -1,0 +1,33 @@
+plugins {
+    id 'kr.entree.spigradle' version '2.2.3'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+    id 'java'
+}
+
+group = "com.dumbdogdiner"
+version = "0.1.0"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly paper("1.16.1")
+}
+
+tasks {
+    build {
+        dependsOn 'shadowJar'
+    }
+
+    shadowJar {
+        archiveClassifier.set('')
+    }
+
+    spigot {
+        authors 'You'
+        // softDepends 'PlaceholderApi'
+        apiVersion '1.16'
+        commands {}
+    }
+}
